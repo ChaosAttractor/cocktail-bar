@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Roboto"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+  }
+
+:root {
+  --main-bg-color: #1A1A1A;
+  --main-text-color: #D7D7D7;
+  --main-border-color: #363636;
+  --card-background-color: #242424;
+  --search: #2F2F2F;
+  --search-text: #E4E4E4;
+  --btn-main-color: #42b983;
+  --btn-active-color: #36956A;
+}
