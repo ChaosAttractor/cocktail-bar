@@ -25,7 +25,11 @@
             </template>
         </Modal>
         <Modal v-model:show="modalVisible" v-else>
-            <template v-slot:title>Корзина пустая</template>
+            <template v-slot:title>
+                <div class="empty">
+                    Корзина пустая
+                </div>
+            </template>
         </Modal>
 </template>
 
@@ -207,6 +211,12 @@ import { mdiCartOutline } from '@mdi/js';
         justify-content: flex-end;
     }
     .bg, h1{
+        background: var(--card-background-color);
+    }
+    .empty {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5em;
         background: var(--card-background-color);
     }
     
