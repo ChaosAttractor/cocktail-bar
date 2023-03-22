@@ -104,25 +104,40 @@
           }
         },
         getSelectedDeg(data){
-          localStorage.deg = localStorage.selected_deg
           if (data.deg == 'Все'){
+            localStorage.deg = ''
             return this.selected_deg = ''
           }
-          return this.selected_deg = data.deg
+          localStorage.deg = data.deg
+          this.selected_deg = data.deg
+          if(this.pagination_items_per_page >= this.searchH.length || this.page == Math.ceil(this.searchH.length / this.pagination_items_per_page)){
+            this.pageEnd = true
+          }
+          return this.selected_deg
         },
         getSelectedTaste(data){
-          localStorage.taste = localStorage.selected_taste
           if (data.taste == 'Все'){
+            localStorage.taste = ''
             return this.selected_taste = ''
           }
-          return this.selected_taste = data.taste
+          localStorage.taste = data.taste
+          this.selected_taste = data.taste
+          if(this.pagination_items_per_page >= this.searchH.length || this.page == Math.ceil(this.searchH.length / this.pagination_items_per_page)){
+            this.pageEnd = true
+          }
+          return this.selected_taste
         },
         getSelectedBase(data){
-          localStorage.base = localStorage.selected_base
           if (data.base == 'Все'){
+            localStorage.base = ''
             return this.selected_base = ''
           }
-          return this.selected_base = data.base
+          localStorage.base = data.base
+          this.selected_base = data.base
+          if(this.pagination_items_per_page >= this.searchH.length || this.page == Math.ceil(this.searchH.length / this.pagination_items_per_page)){
+            this.pageEnd = true
+          }
+          return this.selected_base
         },
         getSelectedPrice(data){
           return this.selected_price = data.price
